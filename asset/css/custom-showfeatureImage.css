@@ -1,0 +1,36 @@
+.column-featured_image{
+	width: 150px;
+	height: auto;
+	overflow: hidden;
+	padding-right: 5%;
+}
+.column-featured_image img{
+	max-width: 100px;
+	height: auto;
+}
+.wp-core-ui .notice.is-dismissible{
+	display: block;
+}
+.acf_none .acf-label {
+    display: none !important;
+}
+.acf_none:before{
+    background: none!important;
+    border: none!important;
+}
+.acf_none .acf-input {
+    width: 100%!important;
+}
+.vc_rs_pdt {
+    padding-top: 0!important;
+}
+#redux-header {
+    display: none;
+}
+.redux-container input,.redux-container label{
+    border-radius: 0!important;
+}
+.wbc-progress-back{
+    position: absolute;
+    width: 100%;
+}
