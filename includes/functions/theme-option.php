@@ -664,7 +664,7 @@
                 'type'     => 'typography',
                 'title'    => __( 'Change Element Font Times New Roman -> ', 'bebostore' ),
                 // 'compiler' => array('body *'),
-                'output'   => array('body,.form-subcribe .subcribe-form-view .title-subcribe strong,.book-info span.book-name,.list-blog .blog-item .title-blog,header.header-two .nav-right .list-right-nav li,header.header-two .search-navigation-full .search form input,.box-meet-author .author-info .desc-name .name-author,.book-search-head,.section-blog-detail .blogs-detail .news-title,.section-blog-detail .nav-detail .next-back,.book-about-author .about-post-author span.author-name,.book-comment-form .comment-reply-title,.right-sidebar .sidebar-widget ul li,.book-contact .book-form-contact .book-address .book-place-name,.blog-items .news-description .news-title,.testimonial-message,.testimonial-author .author-name,.slogan-text,.fillter-alphabeta ul li,.left-full .list-full-categories .items-category a span.cat-title,.list-name-author .list-author-name li a,.hot-author .author-name,.service-item .service-title,.book-cover-description .book-cover-descirption .book-description,.list-store .item-store .store-title,.shopping-cart .shop_table tbody .product-info-name a'),
+                'output'   => array('.form-subcribe .subcribe-form-view .title-subcribe strong,.book-info span.book-name,.list-blog .blog-item .title-blog,header.header-two .nav-right .list-right-nav li,header.header-two .search-navigation-full .search form input,.box-meet-author .author-info .desc-name .name-author,.book-search-head,.section-blog-detail .blogs-detail .news-title,.section-blog-detail .nav-detail .next-back,.book-about-author .about-post-author span.author-name,.book-comment-form .comment-reply-title,.right-sidebar .sidebar-widget ul li,.book-contact .book-form-contact .book-address .book-place-name,.blog-items .news-description .news-title,.testimonial-message,.testimonial-author .author-name,.slogan-text,.fillter-alphabeta ul li,.left-full .list-full-categories .items-category a span.cat-title,.list-name-author .list-author-name li a,.hot-author .author-name,.service-item .service-title,.book-cover-description .book-cover-descirption .book-description,.list-store .item-store .store-title,.shopping-cart .shop_table tbody .product-info-name a'),
                 'subtitle' => __( 'Specify the body font properties.', 'bebostore' ),
                 'google'   => false,
                 'fonts'    => array(
@@ -676,7 +676,7 @@
                 'type'     => 'typography',
                 'title'    => __( 'Change Element Font Merriweather -> ', 'bebostore' ),
                 // 'compiler' => array('body *'),
-                'output'   => array('body,footer .footer-widget .widget-body,.form-subcribe .subcribe-form-view .txt-subcrible-text,.list-blog .blog-item .blog-timeup,.book-bestseller .book-description .book-description-content .book-desc,.book-info span.book-price,.woocommerce .book-item-detail span.book-desc,.right-detail .book-desc-detail .box-detail-desc,.box-meet-author .author-info .desc-name .desc-author,.section-blog-detail .blogs-detail .news-content,.book-about-author .about-post-author span.author-desc,.comment-list .title-comment span,.comment-list .comment .comment-body,.book-contact .book-form-contact .book-address .book-contact-add,.book-contact .book-form-contact .contact-content,.book-contact .book-form-contact .book-contact-form .txt-contact, .book-contact .book-form-contact .book-contact-form .txt-message,.blog-items .news-description .short-desc,.our-team .details-team .person-team .info-person .job,.full-layout .with-widget ul li .book-best-right .name-best .b-price,.subcribe-half .subcribe-message-title .subcribe-message,.hot-author .author-desc,.book-today-hightlight.big-hightlight .book-info .book-desc,.service-item .service-desc,.categories-description,.shopping-cart .shop_table thead tr th,.shopping-cart .shop_table tbody tr td.product-price, .shopping-cart .shop_table tbody tr td.product-subtotal'),
+                'output'   => array('body,footer .footer-widget .widget-body,.form-subcribe .subcribe-form-view .txt-subcrible-text,.list-blog .blog-item .blog-timeup,.book-bestseller .book-description .book-description-content .book-desc,.book-info span.book-price,.woocommerce .book-item-detail span.book-desc,#main-navigation .menu-item a, #main-navigation .menu-item .mega-menu-link, #main-navigation li a, #main-navigation li .mega-menu-link, #mega-menu-wrap-main-menu .menu-item a, #mega-menu-wrap-main-menu .menu-item .mega-menu-link, #mega-menu-wrap-main-menu li a, #mega-menu-wrap-main-menu li .mega-menu-link,.right-detail .book-desc-detail .box-detail-desc,.box-meet-author .author-info .desc-name .desc-author,.section-blog-detail .blogs-detail .news-content,.book-about-author .about-post-author span.author-desc,.comment-list .title-comment span,.comment-list .comment .comment-body,.book-contact .book-form-contact .book-address .book-contact-add,.book-contact .book-form-contact .contact-content,.book-contact .book-form-contact .book-contact-form .txt-contact, .book-contact .book-form-contact .book-contact-form .txt-message,.blog-items .news-description .short-desc,.our-team .details-team .person-team .info-person .job,.full-layout .with-widget ul li .book-best-right .name-best .b-price,.subcribe-half .subcribe-message-title .subcribe-message,.hot-author .author-desc,.book-today-hightlight.big-hightlight .book-info .book-desc,.service-item .service-desc,.categories-description,.shopping-cart .shop_table thead tr th,.shopping-cart .shop_table tbody tr td.product-price, .shopping-cart .shop_table tbody tr td.product-subtotal'),
                 'subtitle' => __( 'Specify the body font properties.', 'bebostore' ),
                 'google'   => false,
                 'fonts'    => array(
@@ -688,7 +688,7 @@
                 'type'     => 'typography',
                 'title'    => __( 'Change Element Font Lato -> ', 'bebostore' ),
                 // 'compiler' => array('body *'),
-                'output'   => array('body,.form-subcribe .subcribe-form-view .title-subcribe span,.title-box,.book-bestseller .book-description .book-description-content .book-tags a,.book-info span.book-author,header.header-two .search-navigation-full .search form button,.woocommerce .book-item-detail span.sku_wrapper,.woocommerce .book-item-detail span.book-quanlity,.woocommerce .book-item-detail span.by-book,.woocommerce .book-item-detail .tagged_as,.woocommerce .book-item-detail .social-share li.title-social,.list-menu-tap li,.box-meet-author .author-info .desc-name .year-author,.left-detail ul li,#main-navigation .menu-item a, #main-navigation .menu-item .mega-menu-link, #main-navigation li a, #main-navigation li .mega-menu-link, #mega-menu-wrap-main-menu .menu-item a, #mega-menu-wrap-main-menu .menu-item .mega-menu-link, #mega-menu-wrap-main-menu li a, #mega-menu-wrap-main-menu li .mega-menu-link, .woocommerce-MyAccount-navigation .menu-item a, .woocommerce-MyAccount-navigation .menu-item .mega-menu-link, .woocommerce-MyAccount-navigation li a, .woocommerce-MyAccount-navigation li .mega-menu-link,.section-blog-detail .blogs-detail .news-dateup,.section-blog-detail .blogs-detail .news-content blockquote,.box-check-out .title-box-checkout,.blog-items .news-description .news-dateup,.header-two #main-navigation .menu-item a,.testimonial-author .author-job,.list-name-author .title-alpha,.left-full .list-full-categories .items-category a span.cat-num,.full-layout .with-widget .name-widget,.service-fitem .text-service,.subcribe-half .subcribe-message-title .subcribe-title,.hot-author .author-tags,.book-today-hightlight.big-hightlight .book-info .book-tags,.breadthums-navigation .navigation-listcat .title-subcat,.archive .breadthums-navigation .woocommerce-ordering .position-sort .pull-left,.archive #product-sidebar .sidebar-widget h2,.pagging ul li .page-numbers,.archive .shop-left-bar .shop-list ul li .book-item-shop span.onsale,.header-page .title-page,.list-store .item-store .store-address,.shopping-cart .title-page,.shopping-cart .shop_table tbody .product-info-name span'),
+                'output'   => array('.form-subcribe .subcribe-form-view .title-subcribe span,.title-box,.book-bestseller .book-description .book-description-content .book-tags a,.book-info span.book-author,header.header-two .search-navigation-full .search form button,.woocommerce .book-item-detail span.sku_wrapper,.woocommerce .book-item-detail span.book-quanlity,.woocommerce .book-item-detail span.by-book,.woocommerce .book-item-detail .tagged_as,.woocommerce .book-item-detail .social-share li.title-social,.list-menu-tap li,.box-meet-author .author-info .desc-name .year-author,.left-detail ul li, .woocommerce-MyAccount-navigation .menu-item a, .woocommerce-MyAccount-navigation .menu-item .mega-menu-link, .woocommerce-MyAccount-navigation li a, .woocommerce-MyAccount-navigation li .mega-menu-link,.section-blog-detail .blogs-detail .news-dateup,.section-blog-detail .blogs-detail .news-content blockquote,.box-check-out .title-box-checkout,.blog-items .news-description .news-dateup,.header-two #main-navigation .menu-item a,.testimonial-author .author-job,.list-name-author .title-alpha,.left-full .list-full-categories .items-category a span.cat-num,.full-layout .with-widget .name-widget,.service-fitem .text-service,.subcribe-half .subcribe-message-title .subcribe-title,.hot-author .author-tags,.book-today-hightlight.big-hightlight .book-info .book-tags,.breadthums-navigation .navigation-listcat .title-subcat,.archive .breadthums-navigation .woocommerce-ordering .position-sort .pull-left,.archive #product-sidebar .sidebar-widget h2,.pagging ul li .page-numbers,.archive .shop-left-bar .shop-list ul li .book-item-shop span.onsale,.header-page .title-page,.list-store .item-store .store-address,.shopping-cart .title-page,.shopping-cart .shop_table tbody .product-info-name span'),
                 'subtitle' => __( 'Specify the body font properties.', 'bebostore' ),
                 'fonts'    => array(
                     'Korina' => 'Korina'
@@ -915,7 +915,8 @@
                     'header.header-two',
                     '.menu-stick #main-navigation .menu-item > a',
                     '#main-navigation .menu-item.menu-item-has-children:after',
-                    '.header-bottom .woocomerce-cart .be'
+                    '.header-bottom .woocomerce-cart .be',
+                    '.navbar-nav .nav-link'
                 ),
                 'mode'      => 'color',
                 //'validate' => 'colorrgba',
@@ -931,8 +932,35 @@
                     'header',
                     'header.header-one',
                     'header.header-two',
+                    'nav.navbar'
                 ),
                 'mode'      => 'background',
+                //'validate' => 'colorrgba',
+            ),
+
+            array(
+                'id'        => 'header-bg-top',
+                'type'      => 'color_rgba',
+                'title'     => __( 'Top Header background Color', 'bebostore' ),
+                'subtitle'  => __( 'Gives you the RGBA color.', 'bebostore' ),
+                // 'compiler' => array('.header'),
+                'output' => array(
+                    '.header-top'
+                ),
+                'mode'      => 'background',
+                //'validate' => 'colorrgba',
+            ),
+            array(
+                'id'        => 'header-top-text-color',
+                'type'      => 'color_rgba',
+                'title'     => __( 'Top Header Text Color', 'bebostore' ),
+                'subtitle'  => __( 'Gives you the RGBA color.', 'bebostore' ),
+                // 'compiler' => array('.header'),
+                'output' => array(
+                    '#small-navigation .menu-item a',
+                    '#small-navigation .account-settings a'
+                ),
+                'mode'      => 'color',
                 //'validate' => 'colorrgba',
             ),
 
