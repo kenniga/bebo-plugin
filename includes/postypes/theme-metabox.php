@@ -2,6 +2,30 @@
 // Create metabox for custom postype and some post
 
 add_filter( 'cmb_meta_boxes', 'beau_theme_metaboxes' );
+
+function cmb_show_on_post_format( $display, $post_format ) {
+    if ( ! isset( $post_format['show_on']['key'] ) ) {
+        return $display;
+    }
+    $post_id = 0;
+    // If we're showing it based on ID, get the current ID
+    if ( isset( $_GET['post'] ) ) {
+        $post_id = $_GET['post'];
+    } elseif ( isset( $_POST['post_ID'] ) ) {
+        $post_id = $_POST['post_ID'];
+    }
+    if ( ! $post_id ) {
+        return $display;
+    }
+    $value  = get_post_format($post_id);
+ 
+    if ( empty( $post_format['show_on']['key'] ) ) {
+        return (bool) $value;
+    }
+    return $value == $post_format['show_on']['value'];
+}
+add_filter( 'cmb_show_on', 'cmb_show_on_post_format', 10, 2 );
+
 function beau_theme_metaboxes( array $meta_boxes ) {
     $prefix = '_beautheme_';
     if(function_exists('get_masterslider_names')){
@@ -97,6 +121,26 @@ function beau_theme_metaboxes( array $meta_boxes ) {
                 'id'      => $prefix . 'footer_custom',
                 'type'    => 'select',
                 'options' => $custom_footer,
+            ),
+        ),
+    );
+
+    //For page and post options header
+    $meta_boxes['video_post_format'] = array(
+        'id'         => 'video_post_format_metabox',
+        'title'      => __( 'Your Video Thumbnail', 'bebostore' ),
+        'pages'      => array( 'post'), // Post type
+        'context'    => 'normal',
+        'priority'   => 'high',
+        'show_names' => true, // Show field names on the left
+        'show_on'    => array( 'key' => 'post_format', 'value' => 'video' ), // Show field names on the left
+        // 'cmb_styles' => true, // Enqueue the CMB stylesheet on the frontend
+        'fields'     => array(
+            array(
+                'name'    => __('Select Video','bebostore'),
+                'desc'    => __('Choose video as thumbnail','bebostore'),
+                'id'      => $prefix . 'video_thumbnail',
+                'type'    => 'oembed',
             ),
         ),
     );
