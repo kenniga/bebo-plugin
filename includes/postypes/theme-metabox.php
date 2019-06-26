@@ -4,7 +4,7 @@
 add_filter( 'cmb_meta_boxes', 'beau_theme_metaboxes' );
 
 function cmb_show_on_post_format( $display, $post_format ) {
-    if ( ! isset( $post_format['show_on']['key'] ) ) {
+    if ( ! isset( $post_format['show_on']['key'] ) || 'post_format' !== $post_format['show_on']['key'] ) {
         return $display;
     }
     $post_id = 0;
@@ -14,15 +14,15 @@ function cmb_show_on_post_format( $display, $post_format ) {
     } elseif ( isset( $_POST['post_ID'] ) ) {
         $post_id = $_POST['post_ID'];
     }
-    if ( ! $post_id ) {
-        return $display;
+    if ( ! $post_id || cmb_Meta_Box::get_object_type() !== 'post' ) {
+        return false;
     }
     $value  = get_post_format($post_id);
  
-    if ( empty( $post_format['show_on']['key'] ) ) {
-        return (bool) $value;
-    }
-    return $value == $post_format['show_on']['value'];
+    if ( $value && in_array( $value, (array) $post_format['show_on']['value'] ) )
+        return true;
+
+    return false;
 }
 add_filter( 'cmb_show_on', 'cmb_show_on_post_format', 10, 2 );
 

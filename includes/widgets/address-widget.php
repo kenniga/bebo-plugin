@@ -63,7 +63,7 @@ class beau_Adress_Widget extends WP_Widget {
 		if ($beau_option) {
 			if ($beau_option['show-social-link']) {
 				echo '
-				<div class="widget-footer">
+				<div class="widget-footer wdgt-address">
 				<ul class="list-social">';
 				foreach($beau_option['show-social-link'] as $key=> $social){
 					if(isset($beau_option['beau-'.$social])){
