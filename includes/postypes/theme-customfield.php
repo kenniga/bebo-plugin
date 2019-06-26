@@ -103,6 +103,11 @@ if(function_exists("register_field_group"))
                     'order_no' => 0,
                     'group_no' => 0,
                 ),
+                array(
+                    'param' => 'product_types',
+                    'operator' => '==',
+                    'value' => 'book',
+                )
             ),
         ),
         'options' => array (
