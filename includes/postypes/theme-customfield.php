@@ -104,9 +104,11 @@ if(function_exists("register_field_group"))
                     'group_no' => 0,
                 ),
                 array(
-                    'param' => 'product_types',
+                    'param' => 'post_taxonomy',
                     'operator' => '==',
-                    'value' => 'book',
+                    'value' => 'product_types:book',
+                    'order_no' => 0,
+                    'group_no' => 0,
                 )
             ),
         ),
