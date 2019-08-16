@@ -287,6 +287,14 @@
                 'subtitle' => __( 'Upload any image using the WordPress native uploader', 'bebostore' ),
                 'default'  => array( 'url' => 'http://s.wordpress.org/style/images/codeispoetry.png' ),
             ),
+             array(
+                'id'       => 'logo-mobile',
+                'type'     => 'media',
+                'url'      => true,
+                'title'    => __( 'Upload logo for mobile', 'bebostore' ),
+                'subtitle' => __( 'Upload any image using the WordPress native uploader', 'bebostore' ),
+                'default'  => array( 'url' => 'http://s.wordpress.org/style/images/codeispoetry.png' ),
+            ),
             array(
                 'id'       => 'admin-email',
                 'type'     => 'text',
