@@ -686,10 +686,7 @@
                 // 'compiler' => array('body *'),
                 'output'   => array('body,.title-box,.list-blog .blog-item .title-blog,.right-sidebar .sidebar-widget ul li,.woocommerce-MyAccount-navigation li a,.woocommerce-account header.entry-title, footer .footer-widget .widget-body,.sc-product-slider .book-info span.book-name,.form-subcribe .subcribe-form-view .txt-subcrible-text,.list-blog .blog-item .blog-timeup,.book-bestseller .book-description .book-description-content .book-desc,.box-check-out .title-box-checkout,.woocommerce .book-item-detail span.book-desc,#main-navigation .menu-item a, #main-navigation .menu-item .mega-menu-link, #main-navigation li a, #main-navigation li .mega-menu-link, #mega-menu-wrap-main-menu .menu-item a, #mega-menu-wrap-main-menu .menu-item .mega-menu-link, #mega-menu-wrap-main-menu li a, #mega-menu-wrap-main-menu li .mega-menu-link,.right-detail .book-desc-detail .box-detail-desc,.box-meet-author .author-info .desc-name .desc-author,.section-blog-detail .blogs-detail .news-content,.book-about-author .about-post-author span.author-desc,.comment-list .title-comment span,.comment-list .comment .comment-body,.book-contact .book-form-contact .book-address .book-contact-add,.book-contact .book-form-contact .contact-content,.book-contact .book-form-contact .book-contact-form .txt-contact, .book-contact .book-form-contact .book-contact-form .txt-message,.blog-items .news-description .short-desc,.our-team .details-team .person-team .info-person .job,.full-layout .with-widget ul li .book-best-right .name-best .b-price,.subcribe-half .subcribe-message-title .subcribe-message,.hot-author .author-desc,.book-today-hightlight.big-hightlight .book-info .book-desc,.service-item .service-desc,.categories-description, .shopping-cart .shop_table tbody .product-info-name a'),
                 'subtitle' => __( 'Specify the body font properties.', 'bebostore' ),
-                'google'   => false,
-                'fonts'    => array(
-                    'Work Sans' => 'Work Sans'
-                )
+                'google'   => true,
             ),
             array(
                 'id'       => 'body-text-lato',
