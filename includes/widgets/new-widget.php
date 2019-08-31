@@ -3,6 +3,8 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+
+sebodo_debug(class_exists('WC_Widget'));
 if( class_exists( 'WC_Widget' ) ){
 
 	class Dahz_Framework_Widget_Product_Category extends WC_Widget {
