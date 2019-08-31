@@ -124,7 +124,9 @@ if( class_exists( 'WC_Widget' ) ){
 /*
  * Create widget item
  */
-add_action( 'widgets_init', 'sf_category_widget' );
-function sf_category_widget() {
-	register_widget('Dahz_Framework_Widget_Product_Category');
+
+if( class_exists( 'WC_Widget' ) ){
+				
+  register_widget( 'Dahz_Framework_Widget_Product_Category' );
+  
 }
