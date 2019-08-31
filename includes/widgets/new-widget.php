@@ -33,10 +33,10 @@ class new_Widget_Product_Categories extends WC_Widget {
 	 * Constructor.
 	 */
 	public function __construct() {
-		$this->widget_cssclass    = 'woocommerce widget_product_categories';
+		$this->widget_cssclass    = 'new-woocommerce widget_product_categories';
 		$this->widget_description = __( 'A list or dropdown of product categories.', 'woocommerce' );
-		$this->widget_id          = 'woocommerce_product_categories';
-		$this->widget_name        = __( 'Product Categories', 'woocommerce' );
+		$this->widget_id          = 'new_woocommerce_product_categories';
+		$this->widget_name        = __( 'New Product Categories', 'woocommerce' );
 		$this->settings           = array(
 			'title'              => array(
 				'type'  => 'text',
