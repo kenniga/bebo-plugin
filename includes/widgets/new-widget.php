@@ -3,17 +3,6 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
-
-/**
- * Product Category Widget.
- *
- * @author   DAHZ - KW
- * @category Widgets
- * @package  Dahz_Modules/Widgets
- * @version  1.0.0
- * @extends  WC_Widget
- */
-
 if( class_exists( 'WC_Widget' ) ){
 
 	class Dahz_Framework_Widget_Product_Category extends WC_Widget {
@@ -129,4 +118,13 @@ if( class_exists( 'WC_Widget' ) ){
 		}
 	}
 
+}
+
+
+/*
+ * Create widget item
+ */
+add_action( 'widgets_init', 'sf_category_widget' );
+function sf_category_widget() {
+	register_widget('Dahz_Framework_Widget_Product_Category');
 }
