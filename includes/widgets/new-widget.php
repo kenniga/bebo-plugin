@@ -4,7 +4,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-print_r(class_exists('WC_Widget'));
 if( class_exists( 'WC_Widget' ) ){
 
 	class Dahz_Framework_Widget_Product_Category extends WC_Widget {
@@ -127,8 +126,9 @@ if( class_exists( 'WC_Widget' ) ){
  * Create widget item
  */
 
-if( class_exists( 'WC_Widget' ) ){
-				
-  register_widget( 'Dahz_Framework_Widget_Product_Category' );
-  
+add_action( 'widgets_init', 'sf_category_widget' );
+function sf_category_widget() {
+	if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
+		register_widget('Dahz_Framework_Widget_Product_Category');
+	}
 }
