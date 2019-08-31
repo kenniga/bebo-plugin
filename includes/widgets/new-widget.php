@@ -114,6 +114,6 @@ class Dahz_Framework_Widget_Product_Category extends WP_Widget {
 add_action( 'widgets_init', 'dahz_woocommerce_product_category' );
 function dahz_woocommerce_product_category() {
 	if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
-		register_widget('dahz_woocommerce_product_category');
+		register_widget('Dahz_Framework_Widget_Product_Category');
 	}
 }
