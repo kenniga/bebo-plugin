@@ -19,7 +19,7 @@ class sf_product_category_Widget extends WP_Widget {
 
 		$default = array(
 			'title' => __('Title','bebostore'),
-			'booknumber' => '',
+			'category_ids' => '',
 		);
 
 		$instance = wp_parse_args( (array) $instance, $default);
