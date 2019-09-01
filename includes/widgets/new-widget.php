@@ -304,7 +304,7 @@ class WC_SF_Widget_Product_Categories extends WC_Widget {
 /*
  * Create widget item
  */
-add_action( 'widgets_init', 'sf_product_category_widget' );
+add_action( 'widgets_init', 'sf_product_category_widget', 9999 );
 function sf_product_category_widget() {
 	register_widget('WC_SF_Widget_Product_Categories');
 }
