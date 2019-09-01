@@ -1,44 +1,61 @@
 <?php
-class Dahz_Framework_Widget_Product_Category extends WP_Widget {
+class sf_product_category_Widget extends WP_Widget {
 
 	/**
 	 * Setup widget: Name, base ID
 	 */
-	public function __construct() {
-		$this->widget_cssclass    = 'woocommerce de-widget widget_product_category';
-    $this->widget_description = esc_html__( 'Display a list of product categories from your store.', 'pabu' );
-    $this->widget_id          = 'dahz_woocommerce_product_category';
-    $this->widget_name        = esc_html__( 'Dahz - Product Category', 'pabu' );
-    $this->settings           = array(
-      'title' => array(
-        'type'  => 'text',
-        'std'   => esc_html__( 'Product Categories', 'pabu' ),
-        'label' => esc_html__( 'Title', 'pabu' ),
-      ),
-      'category_ids' => array(
-        'type'  => 'text',
-        'std'   => esc_html__( '', 'pabu' ),
-        'label' => esc_html__( 'Category slug(s). Separated by comma (,)', 'pabu' ),
-      ),
-    );
+	function __construct() {
+		$tpwidget_options = array(
+			'classname' => 'sf_product_category_widget', //ID của widget
+			'description' => __('This show list of Sebodo Category Widget','bebostore')
+		);
+		parent::__construct('sf_product_category_widget', 'Sebodo Category Widget', $tpwidget_options);
+	}
 
-		parent::__construct('dahz_woocommerce_product_category', 'Hosted book');
+	/**
+	 * Create option for widget
+	 */
+	function form( $instance ) {
+
+		$default = array(
+			'title' => __('Title','bebostore'),
+			'booknumber' => '',
+		);
+
+		$instance = wp_parse_args( (array) $instance, $default);
+
+		$title = esc_attr( $instance['title'] );
+		$category_ids = esc_attr( $instance['category_ids'] );
+
+		//Show options for admin panel
+		echo "<p>".__("Title", 'bebostore')."<input type='text' class='widefat' name='".$this->get_field_name('title')."' value='".$title."' /></p>";
+		echo "<p>".__("Product Categories",'bebostore')."<input type='text' class='widefat' name='".$this->get_field_name('category_ids')."' value='".$category_ids."'></p>";
+	}
+
+	/**
+	 * save widget form
+	 */
+
+	function update( $new_instance, $old_instance ) {
+
+		$instance = $old_instance;
+		$instance['title'] = strip_tags($new_instance['title']);
+		$instance['category_ids'] = strip_tags($new_instance['category_ids']);
 	}
 
 	/**
 	 * Show widget
 	 */
 
-	public function widget( $args, $instance ) {
+	function widget( $args, $instance ) {
 
-		if ( $this->get_cached_widget( $args ) ) {
-      return;
-    }
+		extract( $args );
+		$title 	 = apply_filters( 'widget_title', $instance['title'] );
+		$booknumber = $instance['booknumber'];
 
     ob_start();
 
     $category_ids = ! empty( $instance['category_ids'] ) ? $instance['category_ids'] : $this->settings['category_ids']['std'];
-    $display_as   = ! empty( $instance['display_as'] ) ? $instance['display_as'] : $this->settings['display_as']['std'];
 
     $category_ids = explode( ',', $category_ids );
 
@@ -80,11 +97,10 @@ class Dahz_Framework_Widget_Product_Category extends WP_Widget {
 
     echo sprintf(
       '
-      <ul data-display="%1$s">
-        %2$s
+      <ul>
+        %1$s
       </ul>
       ',
-      esc_attr( $display_as ),
       $category_html
 
     );
@@ -102,9 +118,7 @@ class Dahz_Framework_Widget_Product_Category extends WP_Widget {
 /*
  * Create widget item
  */
-add_action( 'widgets_init', 'dahz_woocommerce_product_category' );
-function dahz_woocommerce_product_category() {
-	if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
-		register_widget('Dahz_Framework_Widget_Product_Category');
-	}
+add_action( 'widgets_init', 'sf_product_category_widget' );
+function sf_product_category_widget() {
+	register_widget('sf_product_category_Widget');
 }
